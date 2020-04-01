@@ -1,0 +1,23 @@
+{
+  "name": "@akayami/telegraf-influxdb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tomasz Rakowski",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.11",
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/_mocha",
+    "lint": "./node_modules/.bin/eslint  --fix .",
+    "test-cov": "node_modules/.bin/nyc _mocha ./test/*.js",
+    "coveralls": "nyc yarn test && nyc report --reporter=text-lcov | node_modules/.bin/coveralls"
+  },
+  "dependencies": {
+    "@akayami/influxdb-line-protocol": "^1.0.0"
+  }
+}
